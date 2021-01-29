@@ -1,0 +1,38 @@
+<!--
+  Generated template for the SettingsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>settings</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<ion-grid>
+	<ion-row>
+		<ion-col width-50>
+			<ion-list>
+				<form (ngSubmit)="saveform()">
+					<ion-item>
+						<ion-label floating>
+							City
+						</ion-label>
+						<ion-input [(ngModel)]="city" name="city" type="text"></ion-input>
+					</ion-item>
+					<ion-item>
+						<ion-label floating>
+							CountryCode
+						</ion-label>
+						<ion-input [(ngModel)]="country_code" name="country_code" type="text"></ion-input>
+					</ion-item>
+					<button ion-button type="submit" block> save </button>
+
+				</form>
+			</ion-list>
+		</ion-col>
+	</ion-row>
+</ion-grid>
+</ion-content>

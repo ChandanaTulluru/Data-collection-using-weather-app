@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-navbar class=om>
+    <ion-title >Home</ion-title>
+  </ion-navbar>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+</ion-header>
+<!--style>
+ion-page.home{
+  background-image:url('../assets/imgs/weather1.jpg');
+}
+
+</style-->
+<ion-content padding class="bm">
+  <ion-grid *ngIf='weather'>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col>
+        <div class="contain">
+          <div class="row">
+            <div class="col-md-6">
+              <h3 id="names"> {{ weather.name }}, {{ weather.sys.country }} </h3>
+            </div>
+            <div class="col-md-6">
+              <img src="{{ imgurl }}" alt="ERROR!">
+            </div>
+          </div>
+          
+            <div >
+              <h1 id="temp"> {{ weather.main.temp-273 }}&deg;C </h1>
+            </div>
+            <br>
+            <div>
+              <button  ion-button round (click)=showDetails() class="button" >Details</button>
+            </div>
+            <!--div class="col-md-6">
+              <h6>Details</h6>
+              <br><hr><br>
+              <table>
+                <tr>
+                  <td>Min/Max temp :</td>
+                  <td>  {{ weather.main.temp_min-273 }}/{{ weather.main.temp_max-273 }}&deg; C  </td>
+                </tr>
+                <tr>
+                  <td>Humidity:</td>
+                  <td>  {{ weather.main.humidity }}%  </td>
+                </tr>
+                <tr>
+                  <td>Pressure:</td>
+                  <td>  {{ weather.main.pressure }} hPa  </td>
+                </tr>
+                <tr>
+
+                  <td>Wind :</td>
+                  <td>  {{ weather.wind.speed }} m/s </td>
+                </tr>
+                
+                
+              </table>
+            </div-->
+          </div>
+          <div>
+                <button  ion-button round (click)=chartDetails() class="button" >graphs</button>            
+          </div>
+         
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+
+
